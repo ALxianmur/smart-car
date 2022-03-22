@@ -1,37 +1,30 @@
-# 逐飞科技STC32G12K128开源库
-
-#### 介绍
+![逐飞LOGO](https://images.gitee.com/uploads/images/2019/0924/114256_eaf16bad_1699060.png "逐飞科技logo 中.png")
+# 逐飞科技STC16F开源库
+#### 简介
 逐飞科技针对参加各类竞赛以及使用STC32G12K128进行产品开发，制作的STC32G12K128开源库。
 
-#### 软件架构
-软件架构说明
+#### 环境准备
+1.  **STC32G硬件环境：** 
+- 推荐使用本公司STC32G核心板，[点击此处购买](https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-22508770840.9.516749ccPBxWt6&id=669462141907)。
+2.  **软件开发环境：** 
+（MDK FOR C251）
+- MDK 推荐使用版本：V5.60。
+3.  **下载器：** 
+（核心板自带）
+- 核心板自带有CH340E芯片，只需要插上TYPE-C数据线即可实现下载功能。
+- USB转TTL：推荐使用本公司USB转TTL，[点击此处购买](https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-22508770840.9.12dc49ccL93dhG&id=524829874577)。
+3.  **内部晶振频率：** 
+- 在main函数中sys_clk可选值:35000000，30000000, 27000000. 24000000, 22118400, 20000000, 18432000, 12000000, 11059200, 6000000, 5529600。
+- 设置系统频率，此频率需要跟STC-ISP软件中的 <输入用户程序运行的IRC频率>选项的频率一致。
+- 如果频率设置不对，将会导致串口的数据不正常,PWM的工作不正常等等。
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  **下载开源库：** 点击页面右侧的克隆/下载按钮，将工程文件保存到本地。您可以使用git克隆（Clone）或下载ZIP压缩包的方式来下载。推荐使用git将工程目录克隆到本地，这样可以使用git随时与我们的开源库保持同步。关于码云与git的使用教程可以参考以下链接 [https://gitee.com/help](https://gitee.com/help)。
+2.  **打开工程：** 将下载好的工程文件夹打开（若下载的为ZIP文件，请先解压压缩包）。在打开工程前，请务必确保您的IDE满足环境准备章节的要求。
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 逐飞科技STC16F核心板
+![逐飞科技STC32G12K128核心板](https://gd2.alicdn.com/imgextra/i4/2364650632/O1CN01KB6ZVU1GXV3kXoJ6a_!!2364650632.jpg "逐飞科技STC32G12K128核心板.jpg")
 
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
