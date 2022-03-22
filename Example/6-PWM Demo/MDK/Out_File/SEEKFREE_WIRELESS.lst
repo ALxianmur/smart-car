@@ -1,0 +1,152 @@
+C251 COMPILER V5.60.0,  SEEKFREE_WIRELESS                                                  19/03/22  15:04:41  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE SEEKFREE_WIRELESS
+OBJECT MODULE PLACED IN .\Out_File\SEEKFREE_WIRELESS.obj
+COMPILER INVOKED BY: D:\ProfessionalSoftware\MDK FOR ARM\C251\BIN\C251.EXE ..\..\Libraries\seekfree_peripheral\SEEKFREE_
+                    -WIRELESS.c XSMALL INTR2 WARNINGLEVEL(3) BROWSE INCDIR(..\..\Libraries\libraries;..\..\Libraries\seekfree_libraries;..\..
+                    -\Libraries\seekfree_peripheral;..\CODE;..\USER\inc;..\USER\src) DEBUG PRINT(.\Out_File\SEEKFREE_WIRELESS.lst) OBJECT(.\O
+                    -ut_File\SEEKFREE_WIRELESS.obj) 
+
+stmt  level    source
+
+    1          /********************************************************************************************************
+             -*************
+    2           * COPYRIGHT NOTICE
+    3           * Copyright (c) 2018,Öð·É¿Æ¼¼
+    4           * All rights reserved.
+    5           * ¼¼ÊõÌÖÂÛQQÈº£ºÒ»Èº£º179029047(ÒÑÂú)  ¶þÈº£º244861897
+    6           *
+    7           * ÒÔÏÂËùÓÐÄÚÈÝ°æÈ¨¾ùÊôÖð·É¿Æ¼¼ËùÓÐ£¬Î´¾­ÔÊÐí²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬
+    8           * »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò£¬ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷¡£
+    9           *
+   10           * @file                Öð·É¿Æ¼¼ÎÞÏß×ª´®¿ÚÄ£¿é
+   11           * @company                     ³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
+   12           * @author              Öð·É¿Æ¼¼(QQ3184284598)
+   13           * @version             ²é¿´docÄÚversionÎÄ¼þ °æ±¾ËµÃ÷
+   14           * @Software            MDK FOR C251 V5.60
+   15           * @Target core         STC32G12K128
+   16           * @Taobao              https://seekfree.taobao.com/
+   17           * @date                2019-03-27
+   18           * @note                
+   19                                                  ½ÓÏß¶¨Òå£º
+   20                                                  ------------------------------------ 
+   21                                                      ÎÞÏß×ª´®¿Ú       µ¥Æ¬»ú                        
+   22                                                  RX              ²é¿´SEEKFREE_WIRELESS.hÎÄ¼þÖÐµÄWIRELESS_UART_TXºê¶¨Òå
+   23                                                  TX              ²é¿´SEEKFREE_WIRELESS.hÎÄ¼þÖÐµÄWIRELESS_UART_RXºê¶¨Òå
+   24                                                  RTS             ²é¿´SEEKFREE_WIRELESS.hÎÄ¼þÖÐµÄRTS_PINºê¶¨Òå
+   25                                                  CMD             ²é¿´SEEKFREE_WIRELESS.hÎÄ¼þÖÐµÄCMD_PINºê¶¨Òå
+   26                                                  ------------------------------------ 
+   27           ********************************************************************************************************
+             -************/
+   28          
+   29          
+   30          #include "SEEKFREE_WIRELESS.h"
+   31          #include "zf_uart.h"
+   32          
+   33          
+   34          
+   35          //-------------------------------------------------------------------------------------------------------
+             -------------
+   36          //  @brief      ÎÞÏß×ª´®¿ÚÄ£¿é»Øµ÷º¯Êý
+   37          //  @param      NULL
+   38          //  @return     void                                    
+   39          //  @since      v1.0
+   40          //  Sample usage:       
+   41          //  @note       
+   42          //-------------------------------------------------------------------------------------------------------
+             -------------
+   43          void wireless_uart_callback(void)
+   44          {
+   45   1              uint8 wireless_rx_buffer = WIRELESS_DATA_BUF;
+   46   1              //½Óµ½Ò»¸ö×Ö½Úºóµ¥Æ¬»ú½«»á½øÈë´®¿ÚÖÐ¶Ï£¬Í¨¹ýÔÚ´Ë´¦¶ÁÈ¡wireless_rx_buffer¿ÉÒÔÈ¡×ßÊý¾Ý
+   47   1      }
+   48          
+   49          
+   50          
+   51          
+   52          //-------------------------------------------------------------------------------------------------------
+C251 COMPILER V5.60.0,  SEEKFREE_WIRELESS                                                  19/03/22  15:04:41  PAGE 2   
+
+             -------------
+   53          //  @brief      ÎÞÏß×ª´®¿ÚÄ£¿é³õÊ¼»¯
+   54          //  @param      NULL
+   55          //  @return     void                                    
+   56          //  @since      v1.0
+   57          //  Sample usage:       
+   58          //  @note       
+   59          //-------------------------------------------------------------------------------------------------------
+             -------------
+   60          void seekfree_wireless_init(void)
+   61          {
+   62   1          wireless_type = WIRELESS_SI24R1;
+   63   1          //±¾º¯ÊýÊ¹ÓÃµÄ²¨ÌØÂÊÎª115200£¬ÎªÎÞÏß×ª´®¿ÚÄ£¿éµÄÄ¬ÈÏ²¨ÌØÂÊ£¬ÈçÐèÆäËû²¨ÌØÂÊÇë×ÔÐÐÅäÖÃÄ£¿é²¢ÐÞ¸Ä´®¿ÚµÄ²
+             -¨ÌØÂÊ
+   64   1      
+   65   1              uart_init(WIRELESS_UART, WIRELESS_UART_RX_PIN, WIRELESS_UART_TX_PIN, WIRELESS_UART_BAUD, WIRELESS_TIMER_
+             -N);        //³õÊ¼»¯´®¿Ú    
+   66   1          
+   67   1      }
+   68          
+   69          //-------------------------------------------------------------------------------------------------------
+             -------------
+   70          //  @brief      ÎÞÏß×ª´®¿ÚÄ£¿é ·¢ËÍº¯Êý
+   71          //  @param      buff        ÐèÒª·¢ËÍµÄÊý¾ÝµØÖ·
+   72          //  @param      len         ·¢ËÍ³¤¶È
+   73          //  @return     uint32      Ê£ÓàÎ´·¢ËÍµÄ×Ö½ÚÊý   
+   74          //  @since      v1.0
+   75          //  Sample usage:       
+   76          //  @note       
+   77          //-------------------------------------------------------------------------------------------------------
+             -------------
+   78          uint32 seekfree_wireless_send_buff(uint8 *buff, uint16 len)
+   79          {
+   80   1          while(len>30)
+   81   1          {
+   82   2              if(RTS_PIN == 1)  
+   83   2              {
+   84   3                  return len;//Ä£¿éÃ¦,Èç¹ûÔÊÐíµ±Ç°³ÌÐòÊ¹ÓÃwhileµÈ´ý Ôò¿ÉÒÔÊ¹ÓÃºóÃæ×¢ÊÍµÄwhileµÈ´ýÓï¾äÌæ»»±¾ifÓï
+             -¾ä
+   85   3              }
+   86   2              //while(RTS_PIN);  //Èç¹ûRTSÎªµÍµçÆ½£¬Ôò¼ÌÐø·¢ËÍÊý¾Ý
+   87   2              uart_putbuff(WIRELESS_UART,buff,30);
+   88   2      
+   89   2              buff += 30; //µØÖ·Æ«ÒÆ
+   90   2              len -= 30;//ÊýÁ¿
+   91   2          }
+   92   1          
+   93   1          if(RTS_PIN == 1)  
+   94   1          {
+   95   2              return len;//Ä£¿éÃ¦,Èç¹ûÔÊÐíµ±Ç°³ÌÐòÊ¹ÓÃwhileµÈ´ý Ôò¿ÉÒÔÊ¹ÓÃºóÃæ×¢ÊÍµÄwhileµÈ´ýÓï¾äÌæ»»±¾ifÓï¾ä
+   96   2          }
+   97   1          //while(RTS_PIN);  //Èç¹ûRTSÎªµÍµçÆ½£¬Ôò¼ÌÐø·¢ËÍÊý¾Ý
+   98   1          uart_putbuff(WIRELESS_UART,buff,len);//·¢ËÍ×îºóµÄÊý¾Ý
+   99   1          
+  100   1          return 0;
+  101   1      }
+
+
+Module Information          Static   Overlayable
+------------------------------------------------
+  code size            =       135     ------
+  ecode size           =    ------     ------
+  data size            =    ------     ------
+  idata size           =    ------     ------
+  pdata size           =    ------     ------
+  xdata size           =    ------     ------
+  xdata-const size     =    ------     ------
+C251 COMPILER V5.60.0,  SEEKFREE_WIRELESS                                                  19/03/22  15:04:41  PAGE 3   
+
+  edata size           =    ------          2
+  bit size             =    ------     ------
+  ebit size            =    ------     ------
+  bitaddressable size  =    ------     ------
+  ebitaddressable size =    ------     ------
+  far data size        =    ------     ------
+  huge data size       =    ------     ------
+  const size           =    ------     ------
+  hconst size          =    ------     ------
+End of Module Information.
+
+
+C251 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
