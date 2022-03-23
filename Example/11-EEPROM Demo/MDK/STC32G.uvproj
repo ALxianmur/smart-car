@@ -149,7 +149,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>0</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -163,7 +163,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>BIN\STCMON251.DLL</Driver>
+            <Driver>BIN\MON251.DLL</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -479,6 +479,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_libraries\zf_uart.h</FilePath>
             </File>
+            <File>
+              <FileName>zf_fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_libraries\zf_fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>zf_fifo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_libraries\zf_fifo.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -613,6 +623,16 @@
               <FileName>SEEKFREE_BLUETOOTH_CH9141.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_BLUETOOTH_CH9141.h</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_WIRELESS_CH573.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_WIRELESS_CH573.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_WIRELESS_CH573.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_WIRELESS_CH573.h</FilePath>
             </File>
           </Files>
         </Group>

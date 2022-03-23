@@ -479,6 +479,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_libraries\zf_uart.h</FilePath>
             </File>
+            <File>
+              <FileName>zf_fifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_libraries\zf_fifo.c</FilePath>
+            </File>
+            <File>
+              <FileName>zf_fifo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_libraries\zf_fifo.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -613,6 +623,16 @@
               <FileName>SEEKFREE_BLUETOOTH_CH9141.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_BLUETOOTH_CH9141.h</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_WIRELESS_CH573.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_WIRELESS_CH573.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_WIRELESS_CH573.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_WIRELESS_CH573.h</FilePath>
             </File>
           </Files>
         </Group>

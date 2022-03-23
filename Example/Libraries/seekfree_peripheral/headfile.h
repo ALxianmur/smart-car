@@ -40,5 +40,6 @@
 #include "SEEKFREE_PRINTF.h"
 #include "SEEKFREE_AT24C02.h"
 #include "SEEKFREE_BLUETOOTH_CH9141.h"
+#include "SEEKFREE_WIRELESS_CH573.h"
 
 #endif

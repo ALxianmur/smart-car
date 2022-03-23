@@ -100,6 +100,10 @@ void UART4_Isr() interrupt 18
         {
             bluetooth_ch9141_uart_callback();   //蓝牙转串口回调函数
         }
+        else if(wireless_type == WIRELESS_CH573)
+        {
+            wireless_ch573_callback();          //CH573无线模块回调函数
+        }
 	}
 }
 
