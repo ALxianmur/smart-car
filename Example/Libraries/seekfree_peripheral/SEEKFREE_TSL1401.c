@@ -33,8 +33,10 @@
 #include "board.h"
 
 
+
 uint8 tsl1401_finish_flag;
 uint16 ccd_data[128];                           //CCD数据
+//uint16 ccd_data_ch2[128];                       //CCD数据通道2
 
 //-------------------------------------------------------------------------------------------------------------------
 //  @brief      TSL1401线阵CCD初始化
@@ -45,7 +47,8 @@ uint16 ccd_data[128];                           //CCD数据
 //-------------------------------------------------------------------------------------------------------------------
 void ccd_init(void)     
 {       
-    adc_init(AD_CHANNEL,0X01);      
+    adc_init(AD_CHANNEL,0X01);
+    //adc_init(AD_CHANNEL_CH2,0X01);     
 	pit_timer_ms(TIM_4,10);
 }
 
@@ -95,6 +98,7 @@ void ccd_collect(void)
     {
 		CCD_CLK(0);  
 		ccd_data[i] = adc_once(AD_CHANNEL, AD_RESOLUTION); 
+        //ccd_data_ch2[i] = adc_once(AD_CHANNEL_CH2, AD_RESOLUTION);
 		CCD_CLK(1); 
     }
 	tsl1401_finish_flag = 1;

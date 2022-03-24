@@ -32,15 +32,18 @@
 #include "zf_uart.h"
 #include "board.h"
 
-
-
-#define CCD_CLK_PIN   	P50               	//CCD CLK引脚定义
-#define CCD_SI_PIN    	P51               	//CCD SI 引脚定义
-#define AD_CHANNEL 		ADC_P14             //定义AD采集通道 ADC_P05
+#define CCD_CLK_PIN   	P33               	//CCD CLK引脚定义
+#define CCD_SI_PIN    	P32               	//CCD SI 引脚定义
+#define AD_CHANNEL 		ADC_P14             //定义AD采集通道 ADC_P14
+//#define AD_CHANNEL_CH2  ADC_P13             //定义AD采集通道2 ADC_P13
 #define EXPOSURE_TIME  	10                  //定义CCD曝光时间 单位MS
 #define PIT_TIMER_CH	TIM_4				//使用周期中断定时器4
 #define AD_RESOLUTION	ADC_12BIT			//AD转换12位
 	
+
+
+#define CCD_CLK(x)      CCD_CLK_PIN = x 
+#define CCD_SI(x)       CCD_SI_PIN  = x
 
 
 #define CCD_CLK(x)      CCD_CLK_PIN = x 
