@@ -38,18 +38,18 @@
 #include "SEEKFREE_BLUETOOTH_CH9141.h"
 
 
-uint8 uart_data;
-uint8 uart_flag;
+//uint8 uart_data;
+//uint8 uart_flag;
 
-vuint8 at_mode = 0;         //0:蓝牙透传模式 1:AT模式 2:模块复位中
-vuint8 at_mode_num;         //at模式时用于指示数据接收的数量
-vuint8 at_mode_data[30];    //接收at命令的缓存
-vuint8 at_mode_cmd_flag;    //OK应答命令接收成功的标志位
+//vuint8 at_mode = 0;         //0:蓝牙透传模式 1:AT模式 2:模块复位中
+//vuint8 at_mode_num;         //at模式时用于指示数据接收的数量
+//vuint8 at_mode_data[30];    //接收at命令的缓存
+//vuint8 at_mode_cmd_flag;    //OK应答命令接收成功的标志位
 
-uint8 mac_address[17];      //本机mac地址
+//uint8 mac_address[17];      //本机mac地址
 
 
-uint8 bluetooth_ch9141_rx_buffer;
+//uint8 bluetooth_ch9141_rx_buffer;
 
 
 static  fifo_struct     bluetooth_ch9141_fifo;
