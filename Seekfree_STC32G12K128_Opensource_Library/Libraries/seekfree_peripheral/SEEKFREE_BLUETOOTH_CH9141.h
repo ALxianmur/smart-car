@@ -52,7 +52,6 @@
 
 
 void        bluetooth_ch9141_uart_callback      (void);
-
 uint8       bluetooth_ch9141_init               (void);
 
 uint32      bluetooth_ch9141_send_buff          (uint8 *buff, uint32 len);

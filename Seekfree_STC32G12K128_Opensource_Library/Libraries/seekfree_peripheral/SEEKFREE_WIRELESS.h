@@ -41,13 +41,17 @@
 
 
 
-#define RTS_PIN P07 			//定义流控位引脚  指示当前模块是否可以接受数据  0可以继续接收  1不可以继续接收
-//#define CMD_PIN P05 			//定义命令引脚
+#define WIRELESS_RTS_PIN P07 			//定义流控位引脚  指示当前模块是否可以接受数据  0可以继续接收  1不可以继续接收
+//#define WIRELESS_CMD_PIN P05 			//定义命令引脚
+
+#define WIRELESS_BUFFER_SIZE       64
+#define WIRELESS_TIMEOUT_COUNT     500
 
 
-void seekfree_wireless_init(void);
+void wireless_uart_init(void);
 void wireless_uart_callback(void);
 
-uint32 seekfree_wireless_send_buff(uint8 *buff, uint16 len);
+uint32 wireless_uart_send_buff(uint8 *buff, uint16 len);
+uint32 wireless_uart_read_buff(uint8 *buff, uint32 len);
 
 #endif 
