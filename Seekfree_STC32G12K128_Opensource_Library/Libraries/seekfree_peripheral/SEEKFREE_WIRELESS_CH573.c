@@ -75,7 +75,7 @@ uint32 wireless_ch573_send_buff(uint8 *buff, uint16 len)
         return len;//模块忙,如果允许当前程序使用while等待 则可以使用后面注释的while等待语句替换本if语句
     }
     //while(WIRELESS_CH573_RTS_PIN);  //如果RTS为低电平，则继续发送数据
-    uart_putbuff(WIRELESS_CH573,buff,len);//发送最后的数据
+    uart_putbuff(WIRELESS_CH573_UART,buff,len);//发送最后的数据
     
     return 0;
 }
