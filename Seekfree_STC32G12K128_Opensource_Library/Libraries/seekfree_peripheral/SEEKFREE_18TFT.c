@@ -162,9 +162,9 @@ void lcd_set_region_simspi(unsigned int x_start,unsigned int y_start,unsigned in
 #elif(2 == TFT_DISPLAY_DIR || 3 == TFT_DISPLAY_DIR)
     lcd_writeIndex_simspi(0x2a);
 	lcd_writeData_simspi(0x00);
-	lcd_writeData_simspi((uint8)(x_start+1);
+	lcd_writeData_simspi((uint8)(x_start+1));
 	lcd_writeData_simspi(0x0);
-	lcd_writeData_simspi((uint8)(x_end+1)));
+	lcd_writeData_simspi((uint8)(x_end+1));
 
 	lcd_writeIndex_simspi(0x2b);
 	lcd_writeData_simspi(0x00);
