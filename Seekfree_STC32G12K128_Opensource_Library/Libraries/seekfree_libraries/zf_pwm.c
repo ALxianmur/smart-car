@@ -306,7 +306,14 @@ void pwm_init(PWMCH_enum pwmch,uint32 freq, uint32 duty)
 	period_temp = sys_clk / freq ;			
 	period_temp = period_temp / (freq_div + 1) - 1;				//周期
 
-	match_temp = period_temp * ((float)duty / PWM_DUTY_MAX);	//占空比
+	if(duty != PWM_DUTY_MAX)
+	{
+		match_temp = period_temp * ((float)duty / PWM_DUTY_MAX);	// 占空比			
+	}
+	else
+	{
+		match_temp = period_temp + 1;								// duty为100%
+	}
 
 	
 	if(PWMB_CH1_P20 <= pwmch)				//PWM5-8
@@ -374,7 +381,15 @@ void pwm_duty(PWMCH_enum pwmch, uint32 duty)
 
 //	P_SW2 |= 0x80;
 
-	match_temp = arr * ((float)duty/PWM_DUTY_MAX);				//占空比
+	if(duty != PWM_DUTY_MAX)
+	{
+		match_temp = arr * ((float)duty/PWM_DUTY_MAX);				//占空比
+	}
+	else
+	{
+		match_temp = arr + 1;
+	}
+	
 							
 	
 	//设置捕获值|比较值
@@ -403,11 +418,21 @@ void pwm_freq(PWMCH_enum pwmch, uint32 freq, uint32 duty)
 	
 
 	//分频计算，周期计算，占空比计算
-	freq_div = (sys_clk / freq) >> 16;							//多少分频
+	freq_div = (sys_clk / freq) >> 16;								// 多少分频
 	period_temp = sys_clk / freq;			
-	period_temp = period_temp / (freq_div + 1) - 1;				//周期
+	period_temp = period_temp / (freq_div + 1) - 1;					// 周期
 	
-	match_temp = period_temp * ((float)duty / PWM_DUTY_MAX);	//占空比
+	if(duty != PWM_DUTY_MAX)
+	{
+		match_temp = period_temp * ((float)duty / PWM_DUTY_MAX);	// 占空比			
+	}
+	else
+	{
+		match_temp = period_temp + 1;								// duty为100%
+	}
+	
+	
+	
 	
 //	P_SW2 |= 0x80;
 	

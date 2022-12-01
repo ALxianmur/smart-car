@@ -224,7 +224,7 @@ void board_init(void)
 	S3CON = 0;
 	S4CON = 0;
 	P_SW1 = 0;
-	P_SW2 = 0;
+	P_SW2 |= 0x80;
 	IE2 = 0;
 	TMOD = 0;
 

@@ -31,6 +31,12 @@
 
 #include "common.h"
 
+//=====================================================软件 IIC 驱动====================================================
+#define MPU6050_SCL_PIN 	P40						// 软件 IIC SCL 引脚
+#define MPU6050_SDA_PIN 	P41 					// 软件 IIC SDA 引脚
+#define MPU6050_IIC_DELAY 	(0)
+//=====================================================软件 IIC 驱动====================================================
+
 // 定义MPU6050内部地址
 
 #define	MPU6050_DEV_ADDR	    0xD0>>1	//IIC写入时的地址字节数据，+1为读取
@@ -57,8 +63,8 @@
 #define	WHO_AM_I				0x75	//IIC地址寄存器(默认数值0x68，只读)
 
 
-extern int16 mpu_gyro_x,mpu_gyro_y,mpu_gyro_z;
-extern int16 mpu_acc_x,mpu_acc_y,mpu_acc_z;
+extern int16 mpu6050_gyro_x,mpu6050_gyro_y,mpu6050_gyro_z;
+extern int16 mpu6050_acc_x,mpu6050_acc_y,mpu6050_acc_z;
 
 void  mpu6050_init(void);               //初始化MPU6050
 void  mpu6050_get_accdata(void);

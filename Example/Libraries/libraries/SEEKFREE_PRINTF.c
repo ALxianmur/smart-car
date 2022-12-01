@@ -209,7 +209,7 @@ void printf_reverse_order(int8 *d_buff, uint32 len)
 //}
 
 
-uint32 zf_sprintf(int8 *buff, const int8 *format, ...)
+uint32 zf_sprintf(char  *buff, const int8 *format, ...)
 {
     uint32 buff_len=0;
     va_list arg;

@@ -20,6 +20,9 @@
 #ifndef __COMMON_H_
 #define __COMMON_H_
 #include "STC32Gxx.h"
+#include <string.h>
+#include <stdio.h>
+#include "intrins.h"
 
 //数据类型声明
 typedef unsigned char   uint8  ;	//  8 bits 
