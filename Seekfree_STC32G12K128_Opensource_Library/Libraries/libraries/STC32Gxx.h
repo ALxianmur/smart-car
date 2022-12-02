@@ -18,6 +18,14 @@ sfr         DPH         =           0x83;
 sfr         DPXL        =           0x84;
 sfr         SPH         =           0x85;
 sfr         PCON        =           0x87;
+sbit        SMOD        =           PCON^7;
+sbit        SMOD0       =           PCON^6;
+sbit        LVDF        =           PCON^5;
+sbit        POF         =           PCON^4;
+sbit        GF1         =           PCON^3;
+sbit        GF0         =           PCON^2;
+sbit        PD          =           PCON^1;
+sbit        IDL         =           PCON^0;
 sfr         TCON        =           0x88;
 sbit        TF1         =           TCON^7;
 sbit        TR1         =           TCON^6;
@@ -33,7 +41,21 @@ sfr         TL1         =           0x8b;
 sfr         TH0         =           0x8c;
 sfr         TH1         =           0x8d;
 sfr         AUXR        =           0x8e;
+sbit        T0x12       =           AUXR^7;
+sbit        T1x12       =           AUXR^6;
+sbit        S1M0x6      =           AUXR^5;
+sbit        T2R         =           AUXR^4;
+sbit        T2CT        =           AUXR^3;
+sbit        T2x12       =           AUXR^2;
+sbit        EXTRAM      =           AUXR^1;
+sbit        S1BRT       =           AUXR^0;
 sfr         INTCLKO     =           0x8f;
+sbit        EX4         =           INTCLKO^6;
+sbit        EX3         =           INTCLKO^5;
+sbit        EX2         =           INTCLKO^4;
+sbit        T2CLKO      =           INTCLKO^2;
+sbit        T1CLKO      =           INTCLKO^1;
+sbit        T0CLKO      =           INTCLKO^0;
 sfr         P1          =           0x90;
 sbit        P10         =           P1^0;
 sbit        P11         =           P1^1;
@@ -50,6 +72,10 @@ sfr         P0M0        =           0x94;
 sfr         P2M1        =           0x95;
 sfr         P2M0        =           0x96;
 sfr         AUXR2       =           0x97;
+sbit        CANSEL      =           AUXR2^3;
+sbit        CAN2EN      =           AUXR2^2;
+sbit        CANEN       =           AUXR2^1;
+sbit        LINEN       =           AUXR2^0;
 sfr         SCON        =           0x98;
 sbit        SM0         =           SCON^7;
 sbit        SM1         =           SCON^6;
@@ -61,8 +87,20 @@ sbit        TI          =           SCON^1;
 sbit        RI          =           SCON^0;
 sfr         SBUF        =           0x99;
 sfr         S2CON       =           0x9a;
+sbit        S2SM0       =           S2CON^7;
+sbit        S2SM1       =           S2CON^6;
+sbit        S2SM2       =           S2CON^5;
+sbit        S2REN       =           S2CON^4;
+sbit        S2TB8       =           S2CON^3;
+sbit        S2RB8       =           S2CON^2;
+sbit        S2TI        =           S2CON^1;
+sbit        S2RI        =           S2CON^0;
 sfr         S2BUF       =           0x9b;
 sfr         IRCBAND     =           0x9d;
+sbit        USBCKS      =           IRCBAND^7;
+sbit        USBCKS2     =           IRCBAND^6;
+sbit        HIRCSEL1    =           IRCBAND^1;
+sbit        HIRCSEL0    =           IRCBAND^0;
 sfr         LIRTRIM     =           0x9e;
 sfr         IRTRIM      =           0x9f;
 sfr         P2          =           0xa0;
@@ -74,8 +112,16 @@ sbit        P24         =           P2^4;
 sbit        P25         =           P2^5;
 sbit        P26         =           P2^6;
 sbit        P27         =           P2^7;
-sfr         BUSSPEED    =           0xa1;
+sfr         BUS_SPEED   =           0xa1;
 sfr         P_SW1       =           0xa2;
+sbit        S1_S1       =           P_SW1^7;
+sbit        S1_S0       =           P_SW1^6;
+sbit        CAN_S1      =           P_SW1^5;
+sbit        CAN_S0      =           P_SW1^4;
+sbit        SPI_S1      =           P_SW1^3;
+sbit        SPI_S0      =           P_SW1^2;
+sbit        LIN_S1      =           P_SW1^1;
+sbit        LIN_S0      =           P_SW1^0;
 sfr         V33TRIM     =           0xa3;
 sfr         BGTRIM      =           0xa5;
 sfr         VRTRIM      =           0xa6;
@@ -92,9 +138,25 @@ sfr         SADDR       =           0xa9;
 sfr         WKTCL       =           0xaa;
 sfr         WKTCH       =           0xab;
 sfr         S3CON       =           0xac;
+sbit        S3SM0       =           S3CON^7;
+sbit        S3ST3       =           S3CON^6;
+sbit        S3SM2       =           S3CON^5;
+sbit        S3REN       =           S3CON^4;
+sbit        S3TB8       =           S3CON^3;
+sbit        S3RB8       =           S3CON^2;
+sbit        S3TI        =           S3CON^1;
+sbit        S3RI        =           S3CON^0;
 sfr         S3BUF       =           0xad;
 sfr         TA          =           0xae;
 sfr         IE2         =           0xaf;
+sbit        EUSB        =           IE2^7;
+sbit        ET4         =           IE2^6;
+sbit        ET3         =           IE2^5;
+sbit        ES4         =           IE2^4;
+sbit        ES3         =           IE2^3;
+sbit        ET2         =           IE2^2;
+sbit        ESPI        =           IE2^1;
+sbit        ES2         =           IE2^0;
 sfr         P3          =           0xb0;
 sbit        P30         =           P3^0;
 sbit        P31         =           P3^1;
@@ -109,8 +171,31 @@ sfr         P3M0        =           0xb2;
 sfr         P4M1        =           0xb3;
 sfr         P4M0        =           0xb4;
 sfr         IP2         =           0xb5;
+sbit        PUSB        =           IP2^7;
+sbit        PI2C        =           IP2^6;
+sbit        PCMP        =           IP2^5;
+sbit        PX4         =           IP2^4;
+sbit        PPWMB       =           IP2^3;
+sbit        PPWMA       =           IP2^2;
+sbit        PSPI        =           IP2^1;
+sbit        PS2         =           IP2^0;
 sfr         IP2H        =           0xb6;
+sbit        PUSBH       =           IP2H^7;
+sbit        PI2CH       =           IP2H^6;
+sbit        PCMPH       =           IP2H^5;
+sbit        PX4H        =           IP2H^4;
+sbit        PPWMBH      =           IP2H^3;
+sbit        PPWMAH      =           IP2H^2;
+sbit        PSPIH       =           IP2H^1;
+sbit        PS2H        =           IP2H^0;
 sfr         IPH         =           0xb7;
+sbit        PLVDH       =           IPH^6;
+sbit        PADCH       =           IPH^5;
+sbit        PSH         =           IPH^4;
+sbit        PT1H        =           IPH^3;
+sbit        PX1H        =           IPH^2;
+sbit        PT0H        =           IPH^1;
+sbit        PX0H        =           IPH^0;
 sfr         IP          =           0xb8;
 sbit        PLVD        =           IP^6;
 sbit        PADC        =           IP^5;
@@ -121,8 +206,27 @@ sbit        PT0         =           IP^1;
 sbit        PX0         =           IP^0;
 sfr         SADEN       =           0xb9;
 sfr         P_SW2       =           0xba;
+sbit        EAXFR       =           P_SW2^7;
+sbit        I2C_S1      =           P_SW2^5;
+sbit        I2C_S0      =           P_SW2^4;
+sbit        CMPO_S      =           P_SW2^3;
+sbit        S4_S        =           P_SW2^2;
+sbit        S3_S        =           P_SW2^1;
+sbit        S2_S        =           P_SW2^0;
 sfr         P_SW3       =           0xbb;
+sbit        I2S_S1      =           P_SW3^7;
+sbit        I2S_S0      =           P_SW3^6;
+sbit        S2SPI_S1    =           P_SW3^5;
+sbit        S2SPI_S0    =           P_SW3^4;
+sbit        S1SPI_S1    =           P_SW3^3;
+sbit        S1SPI_S0    =           P_SW3^2;
+sbit        CAN2_S1     =           P_SW3^1;
+sbit        CAN2_S0     =           P_SW3^0;
 sfr         ADC_CONTR   =           0xbc;
+sbit        ADC_POWER   =           ADC_CONTR^7;
+sbit        ADC_START   =           ADC_CONTR^6;
+sbit        ADC_FLAG    =           ADC_CONTR^5;
+sbit        ADC_EPWMT   =           ADC_CONTR^4;
 sfr         ADC_RES     =           0xbd;
 sfr         ADC_RESL    =           0xbe;
 sfr         P4          =           0xc0;
@@ -135,6 +239,10 @@ sbit        P45         =           P4^5;
 sbit        P46         =           P4^6;
 sbit        P47         =           P4^7;
 sfr         WDT_CONTR   =           0xc1;
+sbit        WDT_FLAG    =           WDT_CONTR^7;
+sbit        EN_WDT      =           WDT_CONTR^5;
+sbit        CLR_WDT     =           WDT_CONTR^4;
+sbit        IDL_WDT     =           WDT_CONTR^3;
 sfr         IAP_DATA    =           0xc2;
 sfr         IAP_ADDRH   =           0xc3;
 sfr         IAP_ADDRL   =           0xc4;
@@ -155,7 +263,17 @@ sfr         P5M0        =           0xca;
 sfr         P6M1        =           0xcb;
 sfr         P6M0        =           0xcc;
 sfr         SPSTAT      =           0xcd;
+sbit        SPIF        =           SPSTAT^7;
+sbit        WCOL        =           SPSTAT^6;
 sfr         SPCTL       =           0xce;
+sbit        SSIG        =           SPCTL^7;
+sbit        SPEN        =           SPCTL^6;
+sbit        DORD        =           SPCTL^5;
+sbit        MSTR        =           SPCTL^4;
+sbit        CPOL        =           SPCTL^3;
+sbit        CPHA        =           SPCTL^2;
+sbit        SPR1        =           SPCTL^1;
+sbit        SPR0        =           SPCTL^0;
 sfr         SPDAT       =           0xcf;
 sfr         PSW         =           0xd0;
 sbit        CY          =           PSW^7;
@@ -174,8 +292,20 @@ sfr         T2H         =           0xd6;
 sfr         T2L         =           0xd7;
 sfr         USBCLK      =           0xdc;
 sfr         T4T3M       =           0xdd;
+sbit        T4R         =           T4T3M^7;
+sbit        T4CT        =           T4T3M^6;
+sbit        T4x12       =           T4T3M^5;
+sbit        T4CLKO      =           T4T3M^4;
+sbit        T3R         =           T4T3M^3;
+sbit        T3CT        =           T4T3M^2;
+sbit        T3x12       =           T4T3M^1;
+sbit        T3CLKO      =           T4T3M^0;
 sfr         ADCCFG      =           0xde;
 sfr         IP3         =           0xdf;
+sbit        PI2S        =           IP3^3;
+sbit        PRTC        =           IP3^2;
+sbit        PS4         =           IP3^1;
+sbit        PS3         =           IP3^0;
 sfr         ACC         =           0xe0;
 sfr         P7M1        =           0xe1;
 sfr         P7M0        =           0xe2;
@@ -183,7 +313,15 @@ sfr         DPS         =           0xe3;
 sfr         DPL1        =           0xe4;
 sfr         DPH1        =           0xe5;
 sfr         CMPCR1      =           0xe6;
+sbit        CMPEN       =           CMPCR1^7;
+sbit        CMPIF       =           CMPCR1^6;
+sbit        PIE         =           CMPCR1^5;
+sbit        NIE         =           CMPCR1^4;
+sbit        CMPOE       =           CMPCR1^1;
+sbit        CMPRES      =           CMPCR1^0;
 sfr         CMPCR2      =           0xe7;
+sbit        INVCMPO     =           CMPCR2^7;
+sbit        DISFLT      =           CMPCR2^6;
 sfr         P6          =           0xe8;
 sbit        P60         =           P6^0;
 sbit        P61         =           P6^1;
@@ -199,10 +337,36 @@ sfr         MXAX        =           0xeb;
 sfr         USBDAT      =           0xec;
 sfr         DMAIR       =           0xed;
 sfr         IP3H        =           0xee;
+sbit        PI2SH       =           IP3H^3;
+sbit        PRTCH       =           IP3H^2;
+sbit        PS4H        =           IP3H^1;
+sbit        PS3H        =           IP3H^0;
 sfr         AUXINTIF    =           0xef;
+sbit        INT4IF      =           AUXINTIF^6;
+sbit        INT3IF      =           AUXINTIF^5;
+sbit        INT2IF      =           AUXINTIF^4;
+sbit        T4IF        =           AUXINTIF^2;
+sbit        T3IF        =           AUXINTIF^1;
+sbit        T2IF        =           AUXINTIF^0;
 sfr         B           =           0xf0;
 sfr         CANICR      =           0xf1;
+sbit        PCAN2H      =           CANICR^7;
+sbit        CAN2IF      =           CANICR^6;
+sbit        CAN2IE      =           CANICR^5;
+sbit        PCAN2L      =           CANICR^4;
+sbit        PCANH       =           CANICR^3;
+sbit        CANIF       =           CANICR^2;
+sbit        CANIE       =           CANICR^1;
+sbit        PCANL       =           CANICR^0;
 sfr         USBCON      =           0xf4;
+sbit        ENUSB       =           USBCON^7;
+sbit        USBRST      =           USBCON^6;
+sbit        PS2M        =           USBCON^5;
+sbit        PUEN        =           USBCON^4;
+sbit        PDEN        =           USBCON^3;
+sbit        DFREC       =           USBCON^2;
+sbit        DP          =           USBCON^1;
+sbit        DM          =           USBCON^0;
 sfr         IAP_TPS     =           0xf5;
 sfr         IAP_ADDRE   =           0xf6;
 sfr         ICHECR      =           0xf7;
@@ -216,15 +380,32 @@ sbit        P75         =           P7^5;
 sbit        P76         =           P7^6;
 sbit        P77         =           P7^7;
 sfr         LINICR      =           0xf9;
+sbit        PLINH       =           LINICR^3;
+sbit        LINIF       =           LINICR^2;
+sbit        LINIE       =           LINICR^1;
+sbit        PLINL       =           LINICR^0;
 sfr         LINAR       =           0xfa;
 sfr         LINDR       =           0xfb;
 sfr         USBADR      =           0xfc;
 sfr         S4CON       =           0xfd;
+sbit        S4SM0       =           S4CON^7;
+sbit        S4ST4       =           S4CON^6;
+sbit        S4SM2       =           S4CON^5;
+sbit        S4REN       =           S4CON^4;
+sbit        S4TB8       =           S4CON^3;
+sbit        S4RB8       =           S4CON^2;
+sbit        S4TI        =           S4CON^1;
+sbit        S4RI        =           S4CON^0;
 sfr         S4BUF       =           0xfe;
 sfr         RSTCFG      =           0xff;
+sbit        ENLVR       =           RSTCFG^6;
+sbit        P54RST      =           RSTCFG^4;
 
 //如下特殊功能寄存器位于扩展RAM区域
-//访问这些寄存器,需先将P_SW2的BIT7设置为1,才可正常读写
+//访问这些寄存器,需先将EAXFR设置为1,才可正常读写
+//    EAXFR = 1;
+//或者
+//    P_SW2 |= 0x80;
 
 /////////////////////////////////////////////////
 //7E:FF00H-7E:FFFFH
@@ -373,26 +554,19 @@ sfr         RSTCFG      =           0xff;
 #define     PWMA_CCMR4              (*(unsigned char volatile far *)0x7efecb)
 #define     PWMA_CCER1              (*(unsigned char volatile far *)0x7efecc)
 #define     PWMA_CCER2              (*(unsigned char volatile far *)0x7efecd)
-#define     PWMA_CNTR               (*(unsigned int  volatile far *)0x7efece)
 #define     PWMA_CNTRH              (*(unsigned char volatile far *)0x7efece)
 #define     PWMA_CNTRL              (*(unsigned char volatile far *)0x7efecf)
-#define     PWMA_PSCR               (*(unsigned int  volatile far *)0x7efed0)
 #define     PWMA_PSCRH              (*(unsigned char volatile far *)0x7efed0)
 #define     PWMA_PSCRL              (*(unsigned char volatile far *)0x7efed1)
-#define     PWMA_ARR                (*(unsigned int  volatile far *)0x7efed2)
 #define     PWMA_ARRH               (*(unsigned char volatile far *)0x7efed2)
 #define     PWMA_ARRL               (*(unsigned char volatile far *)0x7efed3)
 #define     PWMA_RCR                (*(unsigned char volatile far *)0x7efed4)
-#define     PWMA_CCR1               (*(unsigned int  volatile far *)0x7efed5)
 #define     PWMA_CCR1H              (*(unsigned char volatile far *)0x7efed5)
 #define     PWMA_CCR1L              (*(unsigned char volatile far *)0x7efed6)
-#define     PWMA_CCR2               (*(unsigned int  volatile far *)0x7efed7)
 #define     PWMA_CCR2H              (*(unsigned char volatile far *)0x7efed7)
 #define     PWMA_CCR2L              (*(unsigned char volatile far *)0x7efed8)
-#define     PWMA_CCR3               (*(unsigned int  volatile far *)0x7efed9)
 #define     PWMA_CCR3H              (*(unsigned char volatile far *)0x7efed9)
 #define     PWMA_CCR3L              (*(unsigned char volatile far *)0x7efeda)
-#define     PWMA_CCR4               (*(unsigned int  volatile far *)0x7efedb)
 #define     PWMA_CCR4H              (*(unsigned char volatile far *)0x7efedb)
 #define     PWMA_CCR4L              (*(unsigned char volatile far *)0x7efedc)
 #define     PWMA_BKR                (*(unsigned char volatile far *)0x7efedd)
@@ -412,26 +586,19 @@ sfr         RSTCFG      =           0xff;
 #define     PWMB_CCMR4              (*(unsigned char volatile far *)0x7efeeb)
 #define     PWMB_CCER1              (*(unsigned char volatile far *)0x7efeec)
 #define     PWMB_CCER2              (*(unsigned char volatile far *)0x7efeed)
-#define     PWMB_CNTR               (*(unsigned int  volatile far *)0x7efeee)
 #define     PWMB_CNTRH              (*(unsigned char volatile far *)0x7efeee)
 #define     PWMB_CNTRL              (*(unsigned char volatile far *)0x7efeef)
-#define     PWMB_PSCR               (*(unsigned int  volatile far *)0x7efef0)
 #define     PWMB_PSCRH              (*(unsigned char volatile far *)0x7efef0)
 #define     PWMB_PSCRL              (*(unsigned char volatile far *)0x7efef1)
-#define     PWMB_ARR                (*(unsigned int  volatile far *)0x7efef2)
 #define     PWMB_ARRH               (*(unsigned char volatile far *)0x7efef2)
 #define     PWMB_ARRL               (*(unsigned char volatile far *)0x7efef3)
 #define     PWMB_RCR                (*(unsigned char volatile far *)0x7efef4)
-#define     PWMB_CCR1               (*(unsigned int  volatile far *)0x7efef5)
 #define     PWMB_CCR1H              (*(unsigned char volatile far *)0x7efef5)
 #define     PWMB_CCR1L              (*(unsigned char volatile far *)0x7efef6)
-#define     PWMB_CCR2               (*(unsigned int  volatile far *)0x7efef7)
 #define     PWMB_CCR2H              (*(unsigned char volatile far *)0x7efef7)
 #define     PWMB_CCR2L              (*(unsigned char volatile far *)0x7efef8)
-#define     PWMB_CCR3               (*(unsigned int  volatile far *)0x7efef9)
 #define     PWMB_CCR3H              (*(unsigned char volatile far *)0x7efef9)
 #define     PWMB_CCR3L              (*(unsigned char volatile far *)0x7efefa)
-#define     PWMB_CCR4               (*(unsigned int  volatile far *)0x7efefb)
 #define     PWMB_CCR4H              (*(unsigned char volatile far *)0x7efefb)
 #define     PWMB_CCR4L              (*(unsigned char volatile far *)0x7efefc)
 #define     PWMB_BKR                (*(unsigned char volatile far *)0x7efefd)
@@ -454,14 +621,21 @@ typedef struct TAG_PWM_STRUCT
     unsigned char CCMR4;
     unsigned char CCER1;
     unsigned char CCER2;
-    unsigned int CNTR;
-    unsigned int PSCR;
-    unsigned int ARR;
+    unsigned char CNTRH;
+    unsigned char CNTRL;
+    unsigned char PSCRH;
+    unsigned char PSCRL;
+    unsigned char ARRH;
+    unsigned char ARRL;
     unsigned char RCR;
-    unsigned int CCR1;
-    unsigned int CCR2;
-    unsigned int CCR3;
-    unsigned int CCR4;
+    unsigned char CCR1H;
+    unsigned char CCR1L;
+    unsigned char CCR2H;
+    unsigned char CCR2L;
+    unsigned char CCR3H;
+    unsigned char CCR3L;
+    unsigned char CCR4H;
+    unsigned char CCR4L;
     unsigned char BKR;
     unsigned char DTR;
     unsigned char OISR;
@@ -528,16 +702,16 @@ typedef struct TAG_PWM_STRUCT
 #define     USARTCR4                (*(unsigned char volatile far *)0x7efdc3)
 #define     USARTCR5                (*(unsigned char volatile far *)0x7efdc4)
 #define     USARTGTR                (*(unsigned char volatile far *)0x7efdc5)
-#define     USARTBR1                (*(unsigned char volatile far *)0x7efdc6)
-#define     USARTBR2                (*(unsigned char volatile far *)0x7efdc7)
+#define     USARTBRH                (*(unsigned char volatile far *)0x7efdc6)
+#define     USARTBRL                (*(unsigned char volatile far *)0x7efdc7)
 #define     USART2CR1               (*(unsigned char volatile far *)0x7efdc8)
 #define     USART2CR2               (*(unsigned char volatile far *)0x7efdc9)
 #define     USART2CR3               (*(unsigned char volatile far *)0x7efdca)
 #define     USART2CR4               (*(unsigned char volatile far *)0x7efdcb)
 #define     USART2CR5               (*(unsigned char volatile far *)0x7efdcc)
 #define     USART2GTR               (*(unsigned char volatile far *)0x7efdcd)
-#define     USART2BR1               (*(unsigned char volatile far *)0x7efdce)
-#define     USART2BR2               (*(unsigned char volatile far *)0x7efdcf)
+#define     USART2BRH               (*(unsigned char volatile far *)0x7efdce)
+#define     USART2BRL               (*(unsigned char volatile far *)0x7efdcf)
 
 #define     CHIPID                  ( (unsigned char volatile far *)0x7efde0)
 
@@ -596,6 +770,44 @@ typedef struct TAG_PWM_STRUCT
 #define     HSSPI_CFG2              (*(unsigned char volatile far *)0x7efbf9)
 #define     HSSPI_STA               (*(unsigned char volatile far *)0x7efbfa)
 
+//使用下面的宏,需先将EAXFR设置为1
+//使用方法:
+//      char val;
+//
+//      EAXFR = 1;                      //使能访问XFR
+//      READ_HSPWMA(PWMA_CR1, val);     //异步读PWMA组寄存器
+//      val |= 0x01;
+//      WRITE_HSPWMA(PWMA_CR1, val);    //异步写PWMA组寄存器
+
+#define     READ_HSPWMA(reg, dat)           \
+            {                               \
+                while (HSPWMA_ADR & 0x80);  \
+                HSPWMA_ADR = ((char)&(reg)) | 0x80;  \
+                while (HSPWMA_ADR & 0x80);  \
+                (dat) = HSPWMA_DAT;         \
+            }
+
+#define     WRITE_HSPWMA(reg, dat)          \
+            {                               \
+                while (HSPWMA_ADR & 0x80);  \
+                HSPWMA_DAT = (dat);         \
+                HSPWMA_ADR = ((char)&(reg)) & 0x7f;  \
+            }
+
+#define     READ_HSPWMB(reg, dat)           \
+            {                               \
+                while (HSPWMB_ADR & 0x80);  \
+                HSPWMB_ADR = ((char)&(reg)) | 0x80;  \
+                while (HSPWMB_ADR & 0x80);  \
+                (dat) = HSPWMB_DAT;         \
+            }
+
+#define     WRITE_HSPWMB(reg, dat)          \
+            {                               \
+                while (HSPWMB_ADR & 0x80);  \
+                HSPWMB_DAT = (dat);         \
+                HSPWMB_ADR = ((char)&(reg)) & 0x7f;  \
+            }
 
 /////////////////////////////////////////////////
 //7E:FA00H-7E:FAFFH
@@ -751,6 +963,144 @@ typedef struct TAG_PWM_STRUCT
 
 /////////////////////////////////////////////////
 
+//sfr       CANICR      =           0xf1;
+//#define   CANAR                   (*(unsigned char volatile far *)0x7efebb)
+//#define   CANDR                   (*(unsigned char volatile far *)0x7efebc)
+
+//使用下面的宏,需先将EAXFR设置为1
+//使用方法:
+//      char dat;
+//
+//      EAXFR = 1;                  //使能访问XFR
+//      dat = READ_CAN(RX_BUF0);    //读CAN寄存器
+//      WRITE_CAN(TX_BUF0, 0x55);   //写CAN寄存器
+
+#define     READ_CAN(reg)           (CANAR = (reg), CANDR)
+#define     WRITE_CAN(reg, dat)     (CANAR = (reg), CANDR = (dat))
+
+#define     MR                      0x00 
+#define     CMR                     0x01 
+#define     SR                      0x02 
+#define     ISR                     0x03 
+#define     IMR                     0x04 
+#define     RMC                     0x05 
+#define     BTR0                    0x06 
+#define     BTR1                    0x07 
+#define     TM0                     0x06 
+#define     TM1                     0x07 
+#define     TX_BUF0                 0x08 
+#define     TX_BUF1                 0x09 
+#define     TX_BUF2                 0x0a 
+#define     TX_BUF3                 0x0b 
+#define     RX_BUF0                 0x0c 
+#define     RX_BUF1                 0x0d 
+#define     RX_BUF2                 0x0e 
+#define     RX_BUF3                 0x0f 
+#define     ACR0                    0x10 
+#define     ACR1                    0x11 
+#define     ACR2                    0x12 
+#define     ACR3                    0x13 
+#define     AMR0                    0x14 
+#define     AMR1                    0x15 
+#define     AMR2                    0x16 
+#define     AMR3                    0x17 
+#define     ECC                     0x18 
+#define     RXERR                   0x19 
+#define     TXERR                   0x1a 
+#define     ALC                     0x1b 
+
+/////////////////////////////////////////////////
+//LIN Control Regiter
+/////////////////////////////////////////////////
+
+//sfr       LINICR      =           0xf9;
+//sfr       LINAR       =           0xfa;
+//sfr       LINDR       =           0xfb;
+
+//使用方法:
+//      char dat;
+//
+//      dat = READ_LIN(LBUF);       //读CAN寄存器
+//      WRITE_LIN(LBUF, 0x55);      //写CAN寄存器
+
+#define     READ_LIN(reg)           (LINAR = (reg), LINDR)
+#define     WRITE_LIN(reg, dat)     (LINAR = (reg), LINDR = (dat))
+
+#define     LBUF                    0x00 
+#define     LSEL                    0x01 
+#define     LID                     0x02 
+#define     LER                     0x03 
+#define     LIE                     0x04 
+#define     LSR                     0x05 
+#define     LCR                     0x05 
+#define     DLL                     0x06 
+#define     DLH                     0x07 
+#define     HDRL                    0x08 
+#define     HDRH                    0x09 
+#define     HDP                     0x0A 
+
+/////////////////////////////////////////////////
+//USB Control Regiter
+/////////////////////////////////////////////////
+
+//sfr       USBCLK      =           0xdc;
+//sfr       USBDAT      =           0xec;
+//sfr       USBCON      =           0xf4;
+//sfr       USBADR      =           0xfc;
+
+//使用方法:
+//      char dat;
+//
+//      READ_USB(CSR0, dat);        //读USB寄存器
+//      WRITE_USB(FADDR, 0x00);     //写USB寄存器
+
+#define     READ_USB(reg, dat)          \
+            {                           \
+                while (USBADR & 0x80);  \
+                USBADR = (reg) | 0x80;  \
+                while (USBADR & 0x80);  \
+                (dat) = USBDAT;         \
+            }
+
+#define     WRITE_USB(reg, dat)         \
+            {                           \
+                while (USBADR & 0x80);  \
+                USBADR = (reg) & 0x7f;  \
+                USBDAT = (dat);         \
+            }
+
+#define     FADDR                   0x00
+#define     POWER                   0x01
+#define     INTRIN1                 0x02
+#define     INTROUT1                0x04
+#define     INTRUSB                 0x06
+#define     INTRIN1E                0x07
+#define     INTROUT1E               0x09
+#define     INTRUSBE                0x0b
+#define     FRAME1                  0x0c
+#define     FRAME2                  0x0d
+#define     INDEX                   0x0e
+#define     INMAXP                  0x10
+#define     CSR0                    0x11
+#define     INCSR1                  0x11
+#define     INCSR2                  0x12
+#define     OUTMAXP                 0x13
+#define     OUTCSR1                 0x14
+#define     OUTCSR2                 0x15
+#define     COUNT0                  0x16
+#define     OUTCOUNT1               0x16
+#define     OUTCOUNT2               0x17
+#define     FIFO0                   0x20
+#define     FIFO1                   0x21
+#define     FIFO2                   0x22
+#define     FIFO3                   0x23
+#define     FIFO4                   0x24
+#define     FIFO5                   0x25
+#define     UTRKCTL                 0x30
+#define     UTRKSTS                 0x31
+
+/////////////////////////////////////////////////
+
 #define     INT0_VECTOR             0       //0003H
 #define     TMR0_VECTOR             1       //000BH
 #define     INT1_VECTOR             2       //0013H
@@ -765,17 +1115,20 @@ typedef struct TAG_PWM_STRUCT
 #define     INT3_VECTOR             11      //005BH
 #define     TMR2_VECTOR             12      //0063H
 #define     USER_VECTOR             13      //006BH
-#define     BRK_VECTOR              14      //0073H
-#define     EXBRK_VECTOR            15      //007BH
 #define     INT4_VECTOR             16      //0083H
 #define     UART3_VECTOR            17      //008BH
 #define     UART4_VECTOR            18      //0093H
 #define     TMR3_VECTOR             19      //009BH
 #define     TMR4_VECTOR             20      //00A3H
 #define     CMP_VECTOR              21      //00ABH
-#define     PWM_VECTOR              22      //00B3H
-#define     PWMFD_VECTOR            23      //00BBH
 #define     I2C_VECTOR              24      //00C3H
+#define     USB_VECTOR              25      //00CBH
+#define     PWMA_VECTOR             26      //00D3H
+#define     PWMB_VECTOR             27      //00DBH
+#define     CAN_VECTOR              28      //00E3H
+#define     CAN2_VECTOR             29      //00EBH
+#define     LIN_VECTOR              30      //00F3H
+#define     RTC_VECTOR              36      //0123H
 #define     P0INT_VECTOR            37      //012BH
 #define     P1INT_VECTOR            38      //0133H
 #define     P2INT_VECTOR            39      //013BH
@@ -799,8 +1152,27 @@ typedef struct TAG_PWM_STRUCT
 #define     LCM_VECTOR              59      //01DBH
 #define     I2CTXDMA_VECTOR         60      //01E3H
 #define     I2CRXDMA_VECTOR         61      //01EBH
+#define     I2S_VECTOR              62      //01F3H
+#define     I2STXDMA_VECTOR         63      //01FBH
+#define     I2SRXDMA_VECTOR         64      //0203H
 
 /////////////////////////////////////////////////
+
+
+#define T22M_ADDR CHIPID11 //22.1184MHz
+#define T24M_ADDR CHIPID12 //24MHz
+#define T27M_ADDR CHIPID13 //27MHz
+#define T30M_ADDR CHIPID14 //30MHz
+#define T33M_ADDR CHIPID15 //33.1776MHz
+#define T35M_ADDR CHIPID16 //35MHz
+#define T36M_ADDR CHIPID17 //36.864MHz
+#define T40M_ADDR CHIPID18 //40MHz
+#define T44M_ADDR CHIPID19 //44.2368MHz
+#define T48M_ADDR CHIPID20 //48MHz
+#define VRT6M_ADDR CHIPID21 //VRTRIM_6M
+#define VRT10M_ADDR CHIPID22 //VRTRIM_10M
+#define VRT27M_ADDR CHIPID23 //VRTRIM_27M
+#define VRT44M_ADDR CHIPID24 //VRTRIM_44M
 
 #endif
 

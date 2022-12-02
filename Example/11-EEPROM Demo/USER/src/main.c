@@ -20,11 +20,14 @@
 #include "headfile.h"
 
 
+
 /*
- *在board_init中,已经将P54引脚设置为复位
- *如果需要使用P54引脚,可以在board.c文件中的board_init()函数中删除SET_P54_RESRT即可
+ * 系统频率，可查看board.h中的 FOSC 宏定义修改。
+ * board.h文件中FOSC的值设置为0,则程序自动设置系统频率为33.1776MHZ
+ * 在board_init中,已经将P54引脚设置为复位
+ * 如果需要使用P54引脚,可以在board.c文件中的board_init()函数中删除SET_P54_RESRT即可
  */
- 
+
 
 uint8 write_buff[] = {1,2,3,4,5,6,7,8};
 uint8 read_buff[8];
@@ -33,17 +36,9 @@ uint8 read_num = 3;
 
 void main()
 {
-    WTST = 0;               //设置程序代码等待参数，赋值为0可将CPU执行程序的速度设置为最快
-    
-	DisableGlobalIRQ();		//关闭总中断
+    board_init();			// 初始化寄存器,勿删除此句代码。
 	
-    //sys_clk可选值:35000000, 33177600, 30000000, 27000000, 24000000, 22118400, 20000000, 18432000, 12000000, 11059200, 6000000, 5529600。
-    //设置系统频率，此频率需要跟STC-ISP软件中的 <输入用户程序运行的IRC频率>选项的频率一致。
-    //如果频率设置不对，将会导致串口的数据不正常,PWM的工作不正常等等。
-    sys_clk = 35000000;     //设置系统频率为35MHz
-    
-	board_init();			//初始化寄存器
-	//此处编写用户代码(例如：外设初始化代码等)
+	// 此处编写用户代码(例如：外设初始化代码等)
 
     iap_init();			//初始化EEPROM
     
@@ -54,8 +49,7 @@ void main()
 	//将EEPROM中的内容读取到read_str字符串中，地址(0x00-0x07)，共8个字符
 	iap_read_bytes(0x00, read_buff, 8);
 
-	//总中断最后开启
-	EnableGlobalIRQ();		//开启总中断
+
     
  
 
