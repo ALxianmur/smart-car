@@ -345,16 +345,6 @@
               <FilePath>..\..\Libraries\libraries\common.h</FilePath>
             </File>
             <File>
-              <FileName>SEEKFREE_PRINTF.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\libraries\SEEKFREE_PRINTF.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_PRINTF.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Libraries\libraries\SEEKFREE_PRINTF.h</FilePath>
-            </File>
-            <File>
               <FileName>STC32Gxx.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\libraries\STC32Gxx.h</FilePath>
@@ -620,6 +610,16 @@
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_OLED.h</FilePath>
             </File>
             <File>
+              <FileName>SEEKFREE_PRINTF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_PRINTF.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_PRINTF.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_PRINTF.h</FilePath>
+            </File>
+            <File>
               <FileName>SEEKFREE_TSL1401.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_TSL1401.c</FilePath>
@@ -628,6 +628,16 @@
               <FileName>SEEKFREE_TSL1401.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_TSL1401.h</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_VL53L0X.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_VL53L0X.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_VL53L0X.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_VL53L0X.h</FilePath>
             </File>
             <File>
               <FileName>SEEKFREE_VIRSCO.c</FileName>

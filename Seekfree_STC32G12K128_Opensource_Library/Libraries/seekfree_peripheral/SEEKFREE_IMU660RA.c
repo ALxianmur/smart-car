@@ -637,11 +637,11 @@ uint8 imu660ra_init (void)
             // 如果程序在输出了断言信息 并且提示出错位置在这里
             // 那么就是 IMU660RA 配置初始化文件出错了
             // 检查一下接线有没有问题 如果没问题可能就是坏了
-			while(1)
-			{
+//			while(1)
+//			{
 				printf("imu660ra init error.\r\n");
-				delay_ms(200);
-			}
+//				delay_ms(200);
+//			}
             return_state = 1;
             //break;
         }

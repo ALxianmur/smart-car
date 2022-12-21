@@ -66,8 +66,8 @@
 extern int16 mpu6050_gyro_x,mpu6050_gyro_y,mpu6050_gyro_z;
 extern int16 mpu6050_acc_x,mpu6050_acc_y,mpu6050_acc_z;
 
-void  mpu6050_init(void);               //初始化MPU6050
-void  mpu6050_get_accdata(void);
-void  mpu6050_get_gyro(void);
+uint8  mpu6050_init(void);               //初始化MPU6050
+void   mpu6050_get_accdata(void);
+void   mpu6050_get_gyro(void);
 
 #endif

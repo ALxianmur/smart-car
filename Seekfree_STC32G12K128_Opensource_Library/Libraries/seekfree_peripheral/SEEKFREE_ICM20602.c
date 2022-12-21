@@ -554,8 +554,12 @@ uint8 icm20602_init (void)
             // 如果程序在输出了断言信息 并且提示出错位置在这里
             // 那么就是 ICM20602 自检出错并超时退出了
             // 检查一下接线有没有问题 如果没问题可能就是坏了
-            printf("icm20602 self check error.");
-			while(1);
+            
+//			while(1)
+//			{
+				printf("icm20602 self check error.");
+//				delay_ms(200);
+//			}
             return_state = 1;
             break;
         }
@@ -571,11 +575,11 @@ uint8 icm20602_init (void)
                 // 如果程序在输出了断言信息 并且提示出错位置在这里
                 // 那么就是 ICM20602 自检出错并超时退出了
                 // 检查一下接线有没有问题 如果没问题可能就是坏了
-				while(1)
-				{
+//				while(1)
+//				{
 					printf("icm20602 reset error.\r\n");
-					delay_ms(200);
-				}
+//					delay_ms(200);
+//				}
                 return_state = 1;
                 break;
             }

@@ -249,19 +249,23 @@ void mpu6050_simiic_read_regs(uint8 dev_add, uint8 reg, uint8 *dat_add, uint8 nu
 //  @since      v1.0
 //  Sample usage:				
 //-------------------------------------------------------------------------------------------------------------------
-static void mpu6050_self1_check(void)
+static uint8 mpu6050_self1_check(void)
 {
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, PWR_MGMT_1, 0x00);	//解除休眠状态
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, SMPLRT_DIV, 0x07);   //125HZ采样率
-    while(0x07 != mpu6050_simiic_read_reg(MPU6050_DEV_ADDR, SMPLRT_DIV))
+    if(0x07 != mpu6050_simiic_read_reg(MPU6050_DEV_ADDR, SMPLRT_DIV))
     {
-		delay_ms(1);
+		printf("mpu6050 init error.\r\n");
+		return 1;
         //卡在这里原因有以下几点
         //1 MPU6050坏了，如果是新的这样的概率极低
         //2 接线错误或者没有接好
         //3 可能你需要外接上拉电阻，上拉到3.3V
 		//4 可能没有调用模拟IIC的初始化函数
     }
+
+	return 0;
+
 }
 
 
@@ -272,11 +276,14 @@ static void mpu6050_self1_check(void)
 //  @since      v1.0
 //  Sample usage:				
 //-------------------------------------------------------------------------------------------------------------------
-void mpu6050_init(void)
+uint8 mpu6050_init(void)
 {
     delay_ms(100);                                   //上电延时
 
-    mpu6050_self1_check();
+    if(mpu6050_self1_check())
+	{
+		return 1;
+	}
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, PWR_MGMT_1, 0x00);	//解除休眠状态
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, SMPLRT_DIV, 0x07);   //125HZ采样率
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, MPU6050_CONFIG, 0x04);       //
@@ -284,6 +291,7 @@ void mpu6050_init(void)
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, ACCEL_CONFIG, 0x10); //8g
 	mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, User_Control, 0x00);
     mpu6050_simiic_write_reg(MPU6050_DEV_ADDR, INT_PIN_CFG, 0x02);
+	return 0;
 }
 
 

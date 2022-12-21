@@ -787,11 +787,11 @@ uint8 imu963ra_init (void)
         imu963ra_write_acc_gyro_register(IMU963RA_FUNC_CFG_ACCESS, 0x00);       // 关闭HUB寄存器访问
         if(imu963ra_acc_gyro_self_check())                   
         {                
-			while(1)
-			{
+//			while(1)
+//			{
 				printf( "IMU963RA acc and gyro self check error.\r\n");                    
-				delay_ms(200);
-			};
+//				delay_ms(200);
+//			};
 			
             
             return_state = 1;
@@ -836,11 +836,11 @@ uint8 imu963ra_init (void)
         
         if(imu963ra_mag_self_check())
         {
-			while(1)
-			{
+//			while(1)
+//			{
 				printf("IMU963RA mag self check error.\r\n");
-				delay_ms(200);
-			};
+//				delay_ms(200);
+//			};
 			
             
             return_state = 1;
