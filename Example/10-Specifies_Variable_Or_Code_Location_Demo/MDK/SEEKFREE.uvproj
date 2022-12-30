@@ -540,6 +540,16 @@
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_CONFIG.h</FilePath>
             </File>
             <File>
+              <FileName>SEEKFREE_DL1A.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_DL1A.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_DL1A.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_DL1A.h</FilePath>
+            </File>
+            <File>
               <FileName>SEEKFREE_FONT.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_FONT.c</FilePath>
@@ -628,16 +638,6 @@
               <FileName>SEEKFREE_TSL1401.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_TSL1401.h</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_VL53L0X.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_VL53L0X.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_VL53L0X.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_VL53L0X.h</FilePath>
             </File>
             <File>
               <FileName>SEEKFREE_VIRSCO.c</FileName>

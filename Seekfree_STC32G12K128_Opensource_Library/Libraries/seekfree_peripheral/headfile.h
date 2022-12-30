@@ -44,6 +44,6 @@
 #include "SEEKFREE_CONFIG.h"
 #include "SEEKFREE_IMU660RA.h"
 #include "SEEKFREE_IMU963RA.h"
-#include "SEEKFREE_VL53L0X.h"
+#include "SEEKFREE_DL1A.h"
 
 #endif
