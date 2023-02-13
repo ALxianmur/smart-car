@@ -35,10 +35,10 @@ int16 mpu6050_acc_x,mpu6050_acc_y,mpu6050_acc_z;
 
 
 #define GET_MPU6050_SDA   		 	MPU6050_SDA_PIN
-#define MPU6050_SCL_LOW()          	MPU6050_SDA_PIN = 0		//IO口输出低电平
-#define MPU6050_SDA_HIGH()         	MPU6050_SDA_PIN = 1		//IO口输出高电平  
-#define MPU6050_SDA_LOW()          	MPU6050_SCL_PIN = 0		//IO口输出低电平
-#define MPU6050_SCL_HIGH()         	MPU6050_SCL_PIN = 1		//IO口输出高电平
+#define MPU6050_SCL_LOW()          	MPU6050_SCL_PIN = 0		//IO口输出低电平
+#define MPU6050_SCL_HIGH()         	MPU6050_SCL_PIN = 1		//IO口输出高电平  
+#define MPU6050_SDA_LOW()          	MPU6050_SDA_PIN = 0		//IO口输出低电平
+#define MPU6050_SDA_HIGH()         	MPU6050_SDA_PIN = 1		//IO口输出高电平
 
 #define ack 1      //主应答
 #define no_ack 0   //从应答	
