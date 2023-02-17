@@ -99,7 +99,7 @@ void uart_init(UARTN_enum uart_n, UARTPIN_enum uart_rx_pin, UARTPIN_enum uart_tx
 		{
 			if(TIM_2 == tim_n)
 			{
-				S2CON |= 0x10;
+				S2CON |= 0x50;
 				T2L = brt;
 				T2H = brt >> 8;
 				AUXR |= 0x14;

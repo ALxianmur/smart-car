@@ -188,9 +188,9 @@ static uint8 icm20602_read_ch(uint8 ack_x)
 static void icm20602_simiic_write_reg(uint8 dev_add, uint8 reg, uint8 dat)
 {
 	icm20602_simiic_start();
-    send_ch( (dev_add<<1) | 0x00);   //发送器件地址加写位
-	send_ch( reg );   				 //发送从机寄存器地址
-	send_ch( dat );   				 //发送需要写入的数据
+    icm20602_send_ch( (dev_add<<1) | 0x00);   //发送器件地址加写位
+	icm20602_send_ch( reg );   				 //发送从机寄存器地址
+	icm20602_send_ch( dat );   				 //发送需要写入的数据
 	icm20602_simiic_stop();
 }
 
