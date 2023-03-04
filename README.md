@@ -1,5 +1,5 @@
 ![逐飞LOGO](https://images.gitee.com/uploads/images/2019/0924/114256_eaf16bad_1699060.png "逐飞科技logo 中.png")
-# 逐飞科技STC16F开源库
+# 逐飞科技STC32G开源库
 #### 简介
 逐飞科技针对参加各类竞赛以及使用STC32G12K128进行产品开发，制作的STC32G12K128开源库。
 
@@ -23,7 +23,7 @@
 1.  **下载开源库：** 点击页面右侧的克隆/下载按钮，将工程文件保存到本地。您可以使用git克隆（Clone）或下载ZIP压缩包的方式来下载。推荐使用git将工程目录克隆到本地，这样可以使用git随时与我们的开源库保持同步。关于码云与git的使用教程可以参考以下链接 [https://gitee.com/help](https://gitee.com/help)。
 2.  **打开工程：** 将下载好的工程文件夹打开（若下载的为ZIP文件，请先解压压缩包）。在打开工程前，请务必确保您的IDE满足环境准备章节的要求。
 
-#### 逐飞科技STC16F核心板
+#### 逐飞科技STC32G核心板
 ![逐飞科技STC32G12K128核心板](https://gd2.alicdn.com/imgextra/i4/2364650632/O1CN01KB6ZVU1GXV3kXoJ6a_!!2364650632.jpg "逐飞科技STC32G12K128核心板.jpg")
 
 
