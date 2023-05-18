@@ -19,11 +19,11 @@
 					接线定义：
 					------------------------------------ 
 					模块管脚            单片机管脚
-					SCL                 查看TFT_SCL宏定义的引脚     硬件SPI引脚不可随意切换
-					SDA                 查看TFT_SDA宏定义的引脚     硬件SPI引脚不可随意切换
-					RES                 查看REST_PIN宏定义的引脚    
-					DC                  查看DC_PIN宏定义的引脚  
-					CS                  查看TFT_CS宏定义的引脚      硬件SPI引脚不可随意切换
+					SCL                 查看SEEKFREE_18FTF.h文件中的 TFT_SCL  宏定义的引脚     硬件SPI引脚不可随意切换
+					SDA                 查看SEEKFREE_18FTF.h文件中的 TFT_SDA  宏定义的引脚     硬件SPI引脚不可随意切换
+					RES                 查看SEEKFREE_18FTF.h文件中的 REST_PIN 宏定义的引脚    
+					DC                  查看SEEKFREE_18FTF.h文件中的 DC_PIN   宏定义的引脚  
+					CS                  查看SEEKFREE_18FTF.h文件中的 TFT_CS   宏定义的引脚      硬件SPI引脚不可随意切换
 					
 					电源引脚
 					BL  3.3V电源（背光控制引脚，也可以接PWM来控制亮度）

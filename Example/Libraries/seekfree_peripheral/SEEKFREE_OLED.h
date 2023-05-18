@@ -18,12 +18,12 @@
  * @note		
 					接线定义：
 					------------------------------------ 
-					    OLED液晶    单片机                        
-    					D0          查看SEEKFREE_OLED文件内的OLED_SCL_PIN   宏定义
-    					D1          查看SEEKFREE_OLED文件内的OLED_SDA_PIN   宏定义            
-    					RES         查看SEEKFREE_OLED文件内的OLED_RST_PIN   宏定义    
-    					DC          查看SEEKFREE_OLED文件内的OLED_DC_PIN    宏定义
-						CS          查看SEEKFREE_OLED文件内的OLED_CS_PIN    宏定义
+					OLED液晶    单片机                        
+					D0          查看SEEKFREE_OLED.h文件内的OLED_SCL_PIN   宏定义
+					D1          查看SEEKFREE_OLED.h文件内的OLED_SDA_PIN   宏定义            
+					RES         查看SEEKFREE_OLED.h文件内的OLED_RST_PIN   宏定义    
+					DC          查看SEEKFREE_OLED.h文件内的OLED_DC_PIN    宏定义
+					CS          查看SEEKFREE_OLED.h文件内的OLED_CS_PIN    宏定义
 					------------------------------------ 
  ********************************************************************************************************************/
 

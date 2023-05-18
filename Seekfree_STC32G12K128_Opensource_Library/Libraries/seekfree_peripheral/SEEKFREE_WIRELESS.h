@@ -18,11 +18,11 @@
  * @note		
 					接线定义：
 					------------------------------------ 
-					    无线转串口       单片机                        
-    					RX              查看SEEKFREE_WIRELESS.h文件中的WIRELESS_UART_TX宏定义
-    					TX              查看SEEKFREE_WIRELESS.h文件中的WIRELESS_UART_RX宏定义
-    					RTS             查看SEEKFREE_WIRELESS.h文件中的RTS_PIN宏定义
-    					CMD             查看SEEKFREE_WIRELESS.h文件中的CMD_PIN宏定义
+					无线转串口      单片机                        
+    				RX              查看SEEKFREE_WIRELESS.h文件中的WIRELESS_UART_TX宏定义
+    				TX              查看SEEKFREE_WIRELESS.h文件中的WIRELESS_UART_RX宏定义
+    				RTS             查看SEEKFREE_WIRELESS.h文件中的RTS_PIN宏定义
+    				CMD             查看SEEKFREE_WIRELESS.h文件中的CMD_PIN宏定义
 					------------------------------------ 
  ********************************************************************************************************************/
 

@@ -18,12 +18,12 @@
  * @note		
 					接线定义：
 					------------------------------------ 
-					    蓝牙转串口      单片机                        
-    					RX              查看SEEKFREE_BLUETOOTH_CH9141.h文件中的BLUETOOTH_CH9141_UART_TX宏定义
-    					TX              查看SEEKFREE_BLUETOOTH_CH9141.h文件中的BLUETOOTH_CH9141_UART_RX宏定义
-    					RTS             查看SEEKFREE_BLUETOOTH_CH9141.h文件中的BLUETOOTH_CH9141_RTS_PIN宏定义
-                        CTS             悬空
-    					CMD             悬空或者上拉
+					蓝牙转串口      单片机                        
+					RX              查看SEEKFREE_BLUETOOTH_CH9141.h文件中的BLUETOOTH_CH9141_UART_TX宏定义
+					TX              查看SEEKFREE_BLUETOOTH_CH9141.h文件中的BLUETOOTH_CH9141_UART_RX宏定义
+					RTS             查看SEEKFREE_BLUETOOTH_CH9141.h文件中的BLUETOOTH_CH9141_RTS_PIN宏定义
+					CTS             悬空
+					CMD             悬空或者上拉
 					------------------------------------ 
  ********************************************************************************************************************/
 #include "stdio.h"
