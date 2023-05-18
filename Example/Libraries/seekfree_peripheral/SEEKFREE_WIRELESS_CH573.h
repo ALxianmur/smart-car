@@ -15,6 +15,13 @@
 * @Taobao           https://seekfree.taobao.com/
 * @date             2022-03-02
 * @note
+					接线定义：
+					------------------------------------ 
+					无线转串口      单片机                        
+					RX              查看SEEKFREE_WIRELESS_CH573.h文件中的WIRELESS_CH573_UART_TX_PIN宏定义
+					TX              查看SEEKFREE_WIRELESS_CH573.h文件中的WIRELESS_CH573_UART_RX_PIN宏定义
+					RTS             查看SEEKFREE_WIRELESS_CH573.h文件中的WIRELESS_CH573_RTS_PIN宏定义
+					------------------------------------ 
 ********************************************************************************************************************/
 #ifndef _SEEKFREE_WIRELESS_CH573_H_
 #define _SEEKFREE_WIRELESS_CH573_H_
