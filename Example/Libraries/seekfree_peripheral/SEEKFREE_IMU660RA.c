@@ -48,6 +48,8 @@
 #pragma warning disable = 177
 #pragma warning disable = 183
 
+#pragma save
+#pragma optimize (0)
 
 int16 imu660ra_gyro_x = 0, imu660ra_gyro_y = 0, imu660ra_gyro_z = 0;            // 三轴陀螺仪数据   gyro (陀螺仪)
 int16 imu660ra_acc_x = 0, imu660ra_acc_y = 0, imu660ra_acc_z = 0;               // 三轴加速度计数据 acc  (accelerometer 加速度计)
@@ -586,14 +588,11 @@ uint8 imu660ra_init (void)
 	
     delay_ms(20);                                                        		// 等待设备上电成功
 
-//#if IMU660RA_USE_SOFT_IIC 
+#if IMU660RA_USE_SOFT_IIC 
 
-//#else
-//	imu660ra_read_register(IMU660RA_CHIP_ID);                                   // 读取一下设备ID 将设备设置为SPI模式
-//	imu660ra_read_register(IMU660RA_CHIP_ID);                                   // 读取一下设备ID 将设备设置为SPI模式
-//	imu660ra_read_register(IMU660RA_CHIP_ID);                                   // 读取一下设备ID 将设备设置为SPI模式
-
-//#endif
+#else
+	imu660ra_read_register(IMU660RA_CHIP_ID);                                   // 读取一下设备ID 将设备设置为SPI模式
+#endif
 	
     do{
         if(imu660ra_self_check())                                               // IMU660RA 自检
@@ -616,7 +615,7 @@ uint8 imu660ra_init (void)
         imu660ra_write_registers(IMU660RA_INIT_DATA, imu660ra_config_file, sizeof(imu660ra_config_file));   // 输出配置文件
         imu660ra_write_register(IMU660RA_INIT_CTRL, 0x01);                      // 初始化配置结束
         delay_ms(20);
-        if(imu660ra_read_register(IMU660RA_INT_STA) == 0)                       // 检查是否配置完成
+        if(imu660ra_read_register(IMU660RA_INT_STA) != 1)                       // 检查是否配置完成
         {
             // 如果程序在输出了断言信息 并且提示出错位置在这里
             // 那么就是 IMU660RA 配置初始化文件出错了
@@ -652,4 +651,5 @@ uint8 imu660ra_init (void)
     return return_state;
 }
 
+#pragma restore
 
