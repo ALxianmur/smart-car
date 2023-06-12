@@ -48,8 +48,6 @@
 #pragma warning disable = 177
 #pragma warning disable = 183
 
-#pragma save
-#pragma optimize (0)
 
 int16 imu660ra_gyro_x = 0, imu660ra_gyro_y = 0, imu660ra_gyro_z = 0;            // 三轴陀螺仪数据   gyro (陀螺仪)
 int16 imu660ra_acc_x = 0, imu660ra_acc_y = 0, imu660ra_acc_z = 0;               // 三轴加速度计数据 acc  (accelerometer 加速度计)
@@ -650,6 +648,4 @@ uint8 imu660ra_init (void)
 	}while(0);
     return return_state;
 }
-
-#pragma restore
 
