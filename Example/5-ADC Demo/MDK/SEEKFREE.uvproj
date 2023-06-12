@@ -172,12 +172,12 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
-            <DriverSelection>-1</DriverSelection>
+            <Capability>1</Capability>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>0</bUseTDR>
-          <Flash2></Flash2>
-          <Flash3></Flash3>
+          <Flash2>BIN\STCMON251.DLL</Flash2>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -264,7 +264,7 @@
             <uUch>0</uUch>
             <uFlt64>0</uFlt64>
             <Fuzzy>3</Fuzzy>
-            <Optim>3</Optim>
+            <Optim>0</Optim>
             <wLevel>3</wLevel>
             <SizSpd>1</SizSpd>
             <AcaOpt>0</AcaOpt>
@@ -296,7 +296,7 @@
             <DataOverlaying>1</DataOverlaying>
             <OverlayString></OverlayString>
             <MiscControls>REMOVEUNUSED</MiscControls>
-            <DisableWarningNumbers>16,57</DisableWarningNumbers>
+            <DisableWarningNumbers>15,16,57</DisableWarningNumbers>
             <LinkerCmdFile></LinkerCmdFile>
             <Assign></Assign>
             <ReserveString></ReserveString>
@@ -410,16 +410,6 @@
               <FilePath>..\..\Libraries\seekfree_libraries\zf_gpio.h</FilePath>
             </File>
             <File>
-              <FileName>zf_iic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\seekfree_libraries\zf_iic.c</FilePath>
-            </File>
-            <File>
-              <FileName>zf_iic.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Libraries\seekfree_libraries\zf_iic.h</FilePath>
-            </File>
-            <File>
               <FileName>zf_nvic.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\seekfree_libraries\zf_nvic.c</FilePath>
@@ -498,26 +488,6 @@
               <FileName>SEEKFREE_18TFT.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_18TFT.h</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_ABSOLUTE_ENCODER.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_ABSOLUTE_ENCODER.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_ABSOLUTE_ENCODER.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_ABSOLUTE_ENCODER.h</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_AT24C02.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_AT24C02.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_AT24C02.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_AT24C02.h</FilePath>
             </File>
             <File>
               <FileName>SEEKFREE_BLUETOOTH_CH9141.c</FileName>
@@ -628,16 +598,6 @@
               <FileName>SEEKFREE_PRINTF.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_PRINTF.h</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_TSL1401.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_TSL1401.c</FilePath>
-            </File>
-            <File>
-              <FileName>SEEKFREE_TSL1401.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_TSL1401.h</FilePath>
             </File>
             <File>
               <FileName>SEEKFREE_VIRSCO.c</FileName>

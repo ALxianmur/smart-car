@@ -44,7 +44,7 @@
 //#define WIRELESS_CH573_CMD_PIN P05 			//∂®“Â√¸¡Ó“˝Ω≈
 
 
-#define WIRELESS_CH573_BUFFER_SIZE       64
+	#define WIRELESS_CH573_BUFFER_SIZE       64
 #define WIRELESS_CH573_TIMEOUT_COUNT     500
 
 

@@ -24,8 +24,7 @@
 #include "common.h"
 #include "zf_tim.h"
 
-#define UART1_RX_BUFFER_SIZE	100
-#define UART1_TX_BUFFER_SIZE	100
+
 
 
 #define	UART1_CLEAR_RX_FLAG (SCON  &= ~0x01)
@@ -83,9 +82,6 @@ typedef enum //枚举串口引脚
 
 
 
-
-extern uint8 uart1_tx_buff[UART1_TX_BUFFER_SIZE];	//发送缓冲
-extern uint8 uart1_rx_buff[UART1_RX_BUFFER_SIZE];	//接收缓冲
 extern uint8 busy[5];
 
 

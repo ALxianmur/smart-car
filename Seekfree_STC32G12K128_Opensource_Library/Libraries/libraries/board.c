@@ -102,12 +102,12 @@ uint32 set_clk(void)
 	}
 	else
 	{
-		sys_clk = 35000000;
-		//Ñ¡Ôñ 35MHz
+		sys_clk = 33177600;
+		//Ñ¡Ôñ 33.1776MHz
 		CLKDIV = 0x04;
-		IRTRIM = T35M_ADDR;
-		VRTRIM = VRT44M_ADDR;
-		IRCBAND = 0x03;
+		IRTRIM = T33M_ADDR;
+		VRTRIM = VRT27M_ADDR;
+		IRCBAND = 0x02;
 		CLKDIV = 0x00;
 	}
 

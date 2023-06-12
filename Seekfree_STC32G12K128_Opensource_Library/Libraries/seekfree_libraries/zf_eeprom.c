@@ -166,27 +166,27 @@ void iap_erase_page(uint16 addr)
 
 
 
-//-------------------------------------------------------------------------------------------------------------------
-//  @brief      扩展EEPROM写多个字节(无需擦除)
-//  @param      addr			需要写的eeprom地址
-//  @param      *buf			需要写的数据地址
-//  @param      len				需要写的数据长度
-//  @return     void
-//  Sample usage:       		extern_iap_write_bytes(0x0000,(uint8 *)"0123456789";,10);
-//								将"0123456789"写入0x00-0x0A地址中;
-//	@note：						不要跨扇区使用。
-//								addr地址：0-511为一个扇区,512-1023为一个扇区，1024-1535为一个扇区，依次类推。
-//-------------------------------------------------------------------------------------------------------------------
-void extern_iap_write_bytes(uint16 addr, uint8 *buf, uint16 len)
-{ 
-	uint8 temp[512];
-	uint16 i;
-	
-	for(i=0; i<512 ;i++)	temp[i] = 0;			//清0
-	iap_read_bytes(addr&0xFE00, temp, 512);			//读取
-	for(i=0; i<len; i++)	temp[(addr&0x1FF) + i] = buf[i];	//改
-	iap_erase_page(addr);							//擦除
-	iap_write_bytes(addr&0xFE00, temp, 512);		//写入
-}
+////-------------------------------------------------------------------------------------------------------------------
+////  @brief      扩展EEPROM写多个字节(无需擦除)
+////  @param      addr			需要写的eeprom地址
+////  @param      *buf			需要写的数据地址
+////  @param      len				需要写的数据长度
+////  @return     void
+////  Sample usage:       		extern_iap_write_bytes(0x0000,(uint8 *)"0123456789";,10);
+////								将"0123456789"写入0x00-0x0A地址中;
+////	@note：						不要跨扇区使用。
+////								addr地址：0-511为一个扇区,512-1023为一个扇区，1024-1535为一个扇区，依次类推。
+////-------------------------------------------------------------------------------------------------------------------
+//void extern_iap_write_bytes(uint16 addr, uint8 *buf, uint16 len)
+//{ 
+//	uint8 temp[512];
+//	uint16 i;
+//	
+//	for(i=0; i<512 ;i++)	temp[i] = 0;			//清0
+//	iap_read_bytes(addr&0xFE00, temp, 512);			//读取
+//	for(i=0; i<len; i++)	temp[(addr&0x1FF) + i] = buf[i];	//改
+//	iap_erase_page(addr);							//擦除
+//	iap_write_bytes(addr&0xFE00, temp, 512);		//写入
+//}
 
 

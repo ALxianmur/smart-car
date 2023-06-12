@@ -2,10 +2,12 @@
  * COPYRIGHT NOTICE
  * Copyright (c) 2018,Öð·É¿Æ¼¼
  * All rights reserved.
- * æŠ€æœ¯è®¨è®ºQQç¾¤ï¼šä¸€ç¾¤ï¼š179029047(å·²æ»¡)  äºŒç¾¤ï¼š244861897 ÒÔÏÂËùÓÐÄÚÈÝ°æÈ¨¾ùÊôÖð·É¿Æ¼¼ËùÓÐ£¬Î´¾­ÔÊÐí²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬
+ * ¼¼ÊõÌÖÂÛQQÈº£ºÒ»Èº£º179029047(ÒÑÂú)  ¶þÈº£º244861897
+ *
+ * ÒÔÏÂËùÓÐÄÚÈÝ°æÈ¨¾ùÊôÖð·É¿Æ¼¼ËùÓÐ£¬Î´¾­ÔÊÐí²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬
  * »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò£¬ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷¡£
  *
- * @file       		printf
+ * @file       		SEEKFREE_PRINTF
  * @company	   		³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
  * @author     		Öð·É¿Æ¼¼(QQ3184284598)
  * @version    		²é¿´docÄÚversionÎÄ¼þ °æ±¾ËµÃ÷
@@ -13,7 +15,9 @@
  * @Target core		STC32G12K128
  * @Taobao   		https://seekfree.taobao.com/
  * @date       		2019-04-30
+ * @note		    Ê¾²¨Æ÷ÏÂÔØµØÖ·£ºhttps://pan.baidu.com/s/198CMXTZsbI3HAEqNXDngBw£¨°üº¬Çå»ªÖ±Á¢·½°¸×ÊÁÏ£©
  ********************************************************************************************************************/
+
 
 
 #include <stdarg.h>
