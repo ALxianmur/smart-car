@@ -64,7 +64,7 @@ typedef enum
 	SPI_SYSclk_DIV_4 = 0,
 	SPI_SYSclk_DIV_8,
 	SPI_SYSclk_DIV_16,
-	SPI_SYSclk_DIV_32,
+	SPI_SYSclk_DIV_2,
 }SPI_BAUD_enum;
 
 

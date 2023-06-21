@@ -29,33 +29,34 @@
  */
 
 
-uint8 write_buff[] = {1,2,3,4,5,6,7,8};
+uint8 write_buff[] = {0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38};
 uint8 read_buff[8];
-uint8 num = 0;
-uint8 read_num = 3;
+
 
 void main()
 {
     board_init();			// 初始化寄存器,勿删除此句代码。
-	
-	// 此处编写用户代码(例如：外设初始化代码等)
 
-    iap_init();			//初始化EEPROM
+	// 使用之前务必查看 ..\Example\11-EEPROM Demo\MDK文件夹下面的【必看】STC-ISP设置.png
+	// 使用之前务必查看 ..\Example\11-EEPROM Demo\MDK文件夹下面的【必看】STC-ISP设置.png
+	// 使用之前务必查看 ..\Example\11-EEPROM Demo\MDK文件夹下面的【必看】STC-ISP设置.png
+    iap_init();				// 初始化EEPROM
     
-	//将"SEEKFREE"这个字符串到EEPROM中，地址(0x00-0x07)，共8个字符
-	//该函数可以实现，对于同一个地址进行多次写入，不擦除扇区写入
-	extern_iap_write_bytes(0x00, write_buff, 8);
+	// 如果要写入的地址里面有数据。就需要先擦除再写入。
+	// 擦除地址0所在的扇区数据，一共512个字节
+	iap_erase_page(0);		
 	
-	//将EEPROM中的内容读取到read_str字符串中，地址(0x00-0x07)，共8个字符
+	// 将write_buff这个数组写入到EEPROM中，地址(0x00-0x07)，共8个数据
+	iap_write_bytes(0x00, write_buff, 8);
+	
+	// 将EEPROM中的内容读取到read_str字符串中，地址(0x00-0x07)，共8个字符
 	iap_read_bytes(0x00, read_buff, 8);
-
-
-    
- 
 
     while(1)
 	{
-        //发送串口数据
+        // 串口发送读取到的数据
+		// 使用文本模式，串口助手显示的数据为:12345678
+		// 使用HEX模式，串口助手显示的数据为:0x31 0x32 0x33 0x34 0x35 0x36 0x37 0x38 
         uart_putbuff(UART_1, read_buff, 8);
         delay_ms(500);
     }
