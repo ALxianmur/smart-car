@@ -40,9 +40,9 @@ uint16 dl1a_distance_mm;
 
 
 
-#define GET_DL1A_SDA   		 	DL1A_SDA_PIN
-#define DL1A_SDA_LOW()         	DL1A_SDA_PIN = 0		//IO口输出低电平
-#define DL1A_SDA_HIGH()        	DL1A_SDA_PIN = 1		//IO口输出高电平
+#define GET_DL1A_SDA   		 		DL1A_SDA_PIN
+#define DL1A_SDA_LOW()         		DL1A_SDA_PIN = 0		//IO口输出低电平
+#define DL1A_SDA_HIGH()        		DL1A_SDA_PIN = 1		//IO口输出高电平
 
 #define DL1A_SCL_LOW()          	DL1A_SCL_PIN = 0		//IO口输出低电平
 #define DL1A_SCL_HIGH()         	DL1A_SCL_PIN = 1		//IO口输出高电平

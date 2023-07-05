@@ -20,7 +20,7 @@
           <StartupFile>"LIB\STARTUP251.ASM" ("80251 Startup Code")</StartupFile>
           <FlashDriverDll></FlashDriverDll>
           <DeviceId>63457</DeviceId>
-          <RegisterFile>STC16F.H</RegisterFile>
+          <RegisterFile>STC32G.H</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -177,7 +177,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>BIN\STCMON251.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -518,6 +518,16 @@
               <FileName>SEEKFREE_DL1A.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_DL1A.h</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_DL1B.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_DL1B.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEEKFREE_DL1B.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Libraries\seekfree_peripheral\SEEKFREE_DL1B.h</FilePath>
             </File>
             <File>
               <FileName>SEEKFREE_FONT.c</FileName>
