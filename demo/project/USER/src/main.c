@@ -30,16 +30,15 @@ static void peripheral_init(void)
 
 void main()
 {
-	WTST = 0;
-	DisableGlobalIRQ();
-	sys_clk = 35000000;
-	board_init();
-	peripheral_init();
-
+	WTST = 0;//设置将cpu的执行速度调到最快
+	DisableGlobalIRQ();//关闭总中断
+	sys_clk = 35000000;//设置系统频率，需要和stc-isp中的频率一致
+	board_init();//初始化寄存器
+	peripheral_init();//外设初始化
 	EnableGlobalIRQ(); // 开启总中断
 
 	printf("Init OK! \r\n");
-	SMARTCAR_Init();
+	SMARTCAR_Init();//智能车参数初始化
 
 	while (1)
 	{
@@ -48,6 +47,7 @@ void main()
 		TestEncoder();
 		TestSteer();
 		TestKey();
+		printf("123456789/n");
 	}
 }
 

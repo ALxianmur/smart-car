@@ -47,7 +47,7 @@ void SMARTCAR_Init(void)
     smartcar_param.global_speed       = 500.0;
     smartcar_param.circle_pid_ratio   = 1.0 ;
     smartcar_param.circle_in_angle    = 25.0 ;
-    smartcar_param.circle_ready_in_dis= 45.0; // 
+    smartcar_param.circle_ready_in_dis= 45.0; 
     smartcar_param.circle_in_dis	  = 78.0;
     smartcar_param.circle_len		  = 265.0;
     smartcar_param.circle_exit_dis    = 53.0;
@@ -76,7 +76,7 @@ void SMARTCAR_Init(void)
     smartcar_param.run_direction      = 1.0 ;
     smartcar_param.limit_H_err        = 4.0 ;
     smartcar_param.limit_L_err        = 1.0 ;
-	smartcar_param.steer_middle_value = 793 ;
+	smartcar_param.steer_middle_value = 665;
 	smartcar_param.sw_value 		  = 8.0;
 }
 

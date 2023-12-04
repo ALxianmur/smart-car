@@ -49,7 +49,7 @@ typedef struct  SmartCar_Param										//智能车调整参数
     float run_direction;
     float limit_H_err;
     float limit_L_err;
-	float steer_middle_value;
+	float steer_middle_value ;
 	float sw_value;
 } SMARTCAR_PARAM;
 
